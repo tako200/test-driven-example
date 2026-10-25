@@ -2,12 +2,14 @@
 import StockTable, { type Stock } from '@/components/StockTable.vue'
 
 const stocks: Stock[] = [
-  { name: 'A社', shares: 100, price: 1500 },
-  { name: 'B社', shares: 200, price: 800 },
+  { name: 'IBM', shares: 1000, price: 25 },
+  { name: 'GE', shares: 400, price: 100 },
 ]
 </script>
 
 <template>
-  <h1>TDD Hands-on</h1>
-  <StockTable :stocks="stocks" />
+  <main class="p-8">
+    <h1 class="mb-4 text-2xl font-bold">TDD Hands-on</h1>
+    <StockTable :stocks="stocks" />
+  </main>
 </template>

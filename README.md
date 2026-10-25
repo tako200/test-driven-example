@@ -15,42 +15,6 @@ make test        # backend のテストが 1 件通れば OK
 make front-test  # frontend のテストが 1 件通れば OK
 ```
 
-## コマンド一覧
-
-### 共通
-
-| コマンド | 内容 |
-| --- | --- |
-| `make build` | イメージをビルド |
-| `make up` | 開発サーバーを起動（backend: http://localhost:8000/docs 、frontend: http://localhost:5173 ） |
-| `make down` | 開発サーバーを停止 |
-| `make logs` | サーバーログを表示 |
-
-### backend
-
-| コマンド | 内容 |
-| --- | --- |
-| `make test` | テストを実行 |
-| `make watch` | ファイル保存のたびにテストを自動実行（TDD 中はこれを開いておく） |
-| `make cov` | カバレッジ付きでテストを実行 |
-| `make lint` | ruff で lint とフォーマットをチェック |
-| `make format` | ruff で自動整形 |
-| `make shell` | コンテナ内でシェルを起動 |
-
-### frontend
-
-| コマンド | 内容 |
-| --- | --- |
-| `make front-test` | テストを実行 |
-| `make front-watch` | ファイル保存のたびにテストを自動実行（TDD 中はこれを開いておく） |
-| `make front-lint` | ESLint と Prettier でチェック |
-| `make front-format` | 自動整形 |
-| `make front-type-check` | 型チェック |
-| `make front-shell` | コンテナ内でシェルを起動 |
-
-`backend/` と `frontend/` はコンテナにマウントされているため、ホストで編集した内容はそのまま反映されます。
-frontend から `/api/...` にリクエストすると、backend に転送されます（例: `/api/health` → backend の `/health`）。
-
 ## ディレクトリ構成
 
 ```

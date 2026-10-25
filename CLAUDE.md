@@ -42,6 +42,7 @@ Claude はこのファイルの方針に従って環境構築・コード作成�
 | --- | --- |
 | フレームワーク | Vue 3（Composition API, `<script setup>`）+ TypeScript |
 | ビルド / 開発サーバー | Vite |
+| スタイリング | Tailwind CSS v4（`@tailwindcss/vite`。エントリは `src/style.css`） |
 | テストランナー | Vitest（jsdom 環境） |
 | コンポーネントテスト | @vue/test-utils |
 | 型チェック | vue-tsc |
